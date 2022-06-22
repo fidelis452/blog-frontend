@@ -1,0 +1,34 @@
+.contain{
+    width:70%;
+    margin-left: 15%;
+}
+.bg{
+    background-image: url("https://st.depositphotos.com/1202217/1833/i/950/depositphotos_18335825-stock-photo-portfolio-cut-from-paper-on.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right{
+     background: linear-gradient(60deg, rgb(20, 20, 20) 0%, rgb(2, 0, 34) 100%);
+
+}
+#emailcheck{
+    font-size: 12px; color: red;
+}
+#passwordcheck{
+    font-size: 12px; color: red;
+}
+.aboutme{
+    color:darkorange;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+}
+.about{
+    color: rgb(255, 255, 255);
+}
+p{
+    color: rgba(235, 255, 253, 0.9);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0px 10%;
+}

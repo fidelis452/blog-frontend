@@ -1,0 +1,44 @@
+.testimonials {
+    margin: 25px auto;
+    /* background: #fff; */
+    background: linear-gradient(60deg, rgb(20, 20, 20) 0%, rgb(2, 0, 34) 100%);  
+    width: 80%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 6rem 4rem 5rem 4rem;
+    color: aquamarine;
+}
+.h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.testimonial{
+    font-weight: 600;
+    font-size: 14px;
+    color: darkgray;
+    /* height: 70px; */
+    font-style: italic;
+}
+.overview{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+.list-inline-item{
+    color: orange;
+}
+#prev-btn,
+#next-btn {
+	color: var(--primery-blue);
+	font-size: 1.25rem;
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+    color: rgb(0, 196, 218);
+	margin: 1em 0.8em;
+}
+.btn{
+    margin-top: 50px;
+}

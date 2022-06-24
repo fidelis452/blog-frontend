@@ -19,7 +19,7 @@ const Login = ({ setLoginUser }) => {
     }
     
     const login = () => {
-        axios.post("http://localhost:5000/login", user)
+        axios.post("https://fidelis-waweru.herokuapp.com/login", user)
             .then(res => {
                 alert("Login successful");
                 setLoginUser(res.data.user)

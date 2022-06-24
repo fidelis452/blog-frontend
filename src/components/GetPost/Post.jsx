@@ -14,7 +14,7 @@ export default function Post() {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/addpost")
+        axios.get("https://fidelis-waweru.herokuapp.com/addpost")
             .then(res => {
                 setPost(res.data)
                 //  console.log(post);

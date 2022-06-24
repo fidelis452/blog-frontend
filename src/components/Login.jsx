@@ -9,16 +9,17 @@ const Login = ({ setLoginUser }) => {
         email: "",
         password: ""
     })
-    // const navigate = useNavigate()
 
+    // const navigate = useNavigate()
     const handleChange = e => {
         const { name, value } = e.target
         setUser({
             ...user, [name]: value
         })
     }
+    
     const login = () => {
-        axios.post("http://localhost:4000/login", user)
+        axios.post("http://localhost:5000/login", user)
             .then(res => {
                 alert("Login successful");
                 setLoginUser(res.data.user)

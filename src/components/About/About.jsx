@@ -21,7 +21,7 @@ export default function About() {
                                         <h1 class="h4 text-gray-900 mb-4">About Me</h1>
                                     </div>
                                     <div className='about'>
-                                        <p>I’m a Front-End Developer located in Poland.
+                                        <p className='about-p'>I’m a Front-End Developer located in Poland.
                                             I have a serious passion for UI effects,
                                             animations and creating intuitive, dynamic user experiences.
 

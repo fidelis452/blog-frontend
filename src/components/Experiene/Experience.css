@@ -1,15 +1,15 @@
-
 /*/ start about work experience /*/
-.experience{
-	background: linear-gradient(60deg, rgb(35, 86, 92) 0%, rgb(8, 43, 38) 100%); 
-	 
+.experience {
+	/* background: linear-gradient(60deg, rgb(35, 86, 92) 0%, rgb(8, 43, 38) 100%); */
+
 }
+
 #experience {
-	margin-top: 10px; 
-  color: chocolate;
-  width: 90%;
-  margin-left: 5%;
-  margin-left: 5%;
+	margin-top: 10px;
+	color: chocolate;
+	width: 90%;
+	margin-left: 5%;
+	margin-left: 5%;
 }
 
 #experience h2 {
@@ -19,10 +19,11 @@
 	padding-bottom: 5px;
 	text-align: center;
 }
+
 .timeline-label h4 {
 	font-size: 30px;
 	color: #40E0D0;
-  padding-right: 25px;
+	padding-right: 25px;
 	padding: 16px 25px 16px 20px;
 	font-weight: 700;
 }
@@ -88,7 +89,7 @@
 
 .timeline-label {
 	padding-right: 0;
-  text-align:right;
+	text-align: right;
 	margin-top: 2%;
 }
 
@@ -123,9 +124,11 @@
 	color: rgb(0, 0, 0);
 	line-height: 27px;
 }
-#p{
-  font-weight: bold;
+
+#p {
+	font-weight: bold;
 }
+
 .timeline time {
 	display: block;
 	width: 65px;
@@ -173,5 +176,24 @@
 	margin-bottom: 20px;
 }
 
+@media (max-width: 880px) {
+
+	.timeline-label {
+		text-align: left;
+	}
+	.timeline-label p {
+		color: #000000;
+		padding: 0px;
+		line-height: 27px;
+	}
+	.timeline-label h4 {
+		font-size: 30px;
+		color: #40E0D0;
+		padding-right: 25px;
+		padding: 0px;
+		font-weight: 700;
+	}
+	
+}
 
 /*/ end about work experience /*/

@@ -1,82 +1,81 @@
-import React, { useReducer } from 'react'
+import React from 'react'
 import { useState } from 'react'
-import "./Contact.css"
 import axios from "axios"
-export default function Contact() {
-    const [message, setMessage] = useState('');
-    const [user, setUser] = useState({
-        lname: "",
-        fname:"",
-        to:  "",
-        phoneNo: "",
-        desc: ""
+import "./Contact.css"
+const Contact = ({setNew}) => {
+  const [msg, setData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    text: ""
+  })
+  const changeHandler = e => {
+    const {name, value} = e.target
+    setData({ ...msg, [name]:value 
     })
-    const {firstName, lastName,to, phoneNo,desc} = user;
-    const onInputChange = e => {
-        setUser({...user, [e.target.name]: e.target.value})
-    }
-    const onSubmit = async e => {
-        // e.preventDefault()
-        await axios.post("http://localhost:4000/users/", user)
-        .then(response => setMessage(response.data.resp))
-    }
+  }
+  const submitHandler = e => {
+    // e.preventDefault()
+    axios.post("http://localhost:5000/contact", msg)
+    .then(res => 
+      setNew(res.data.msg))
+    .catch(res => res.err)
+    console.log(msg);
+  }
   return (
-    <div>
-      <div class="contact">
-      <h2>Contact Us</h2>
-      <div class="row100">
-        <div class="col">
-          <div class="inputBox">
-            <input type="text" name="fname"
-            onChange={onInputChange} value={firstName} required="required"/>
-            <span class="text">First Name</span>
-            <span class="line"></span>
+    <div className='contact'>
+      <form onSubmit={submitHandler}>
+        <div class="contact-title">Contact Me</div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputfname">First Name</label>
+            <input
+              type="fname"
+              name='fname'
+              class="form-control"
+              id="inputname"
+              onChange={changeHandler}
+              value={msg.fname}
+              placeholder="First Name" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputlname">Last Name</label>
+            <input
+              type="lname"
+              name='lname'
+              class="form-control"
+              id="inputfname"
+              onChange={changeHandler}
+              value={msg.lname}
+              placeholder="Last Name" />
           </div>
         </div>
-        <div class="col">
-          <div class="inputBox">
-            <input type="text" name="lname"
-            onChange={onInputChange} value={lastName} required="required"/>
-            <span class="text">Last Name</span>
-            <span class="line"></span>
-          </div>
+        <div class="form-group">
+          <label for="inputEmail4">Email</label>
+          <input
+            type="email"
+            name='email'
+            class="form-control"
+            id="inputEmail4"
+            onChange={changeHandler}
+            value={msg.email}
+            placeholder="Email" />
         </div>
-      </div>
-      <div class="row100">
-        <div class="col">
-          <div class="inputBox">
-            <input type="text" name="to"
-            onChange={onInputChange} value={user.to} required="required"/>
-            <span class="text">Email</span>
-            <span class="line"></span>
-          </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Message</label>
+          <textarea
+            class="form-control"
+            name="text"
+            onChange={changeHandler}
+            value={msg.text}
+            placeholder="Enter Your  Message here....."
+            id="exampleFormControlTextarea1"
+            rows="3">
+          </textarea>
         </div>
-        <div class="col">
-          <div class="inputBox">
-            <input type="text" name="phoneNo"
-            onChange={onInputChange} value={phoneNo} required="required"/>
-            <span class="text">Mobile</span>
-            <span class="line"></span>
-          </div>
-        </div>
-      </div>
-      <div class="row100">
-        <div class="col">
-          <div class="inputBox textarea">
-            <textarea type="text" name="desc"
-            onChange={onInputChange} value={desc} required="required"/>
-            <span class="text">Type your message Here...</span>
-            <span class="line"></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row100">
-        <div class="col">
-          <input type="submit" onClick={onSubmit} value="Send"/>
-        </div>
-      </div>
-    </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
     </div>
   )
 }
+export default Contact;

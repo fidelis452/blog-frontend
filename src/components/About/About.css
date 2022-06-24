@@ -6,6 +6,7 @@
     background-image: url("https://st.depositphotos.com/1202217/1833/i/950/depositphotos_18335825-stock-photo-portfolio-cut-from-paper-on.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 400px;
 }
 .right{
      background: linear-gradient(60deg, rgb(20, 20, 20) 0%, rgb(2, 0, 34) 100%);
@@ -25,10 +26,10 @@
 .about{
     color: rgb(255, 255, 255);
 }
-p{
+.about-p{
     color: rgba(235, 255, 253, 0.9);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
     padding: 0px 10%;
 }

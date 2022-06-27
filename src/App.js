@@ -31,8 +31,8 @@ const App = ()=>{
             <Blog/>
             {/* <GetPost />  */}
 
-            <Graphics />
-            <Website />
+            {/* <Graphics />
+            <Website /> */}
             </div>
             <Contact />
             <Footer />

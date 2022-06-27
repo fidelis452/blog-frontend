@@ -16,7 +16,7 @@ const Contact = ({setNew}) => {
   }
   const submitHandler = e => {
     // e.preventDefault()
-    axios.post("https://fidelis-waweru.herokuapp.com/contact", msg)
+    axios.post("https://localhost:5000/contact", msg)
     .then(res => 
       setNew(res.data.msg))
     .catch(res => res.err)

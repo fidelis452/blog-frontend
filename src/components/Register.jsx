@@ -45,7 +45,7 @@ class App extends Component {
             email:this.state.email,
             password:this.state.password
         }
-        axios.post("https://localhost:5000/signup",registeredUsers)
+        axios.post("http://localhost:5000/signup",registeredUsers)
         .then(response => console.log(response.data))
 
         this.setState ={

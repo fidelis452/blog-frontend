@@ -19,7 +19,7 @@ const Login = ({ setLoginUser }) => {
     }
     
     const login = () => {
-        axios.post("https://localhost:5000/login", user)
+        axios.post("http://localhost:5000/login", user)
             .then(res => {
                 alert("Login successful");
                 setLoginUser(res.data.user)

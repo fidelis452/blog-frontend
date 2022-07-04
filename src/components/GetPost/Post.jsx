@@ -14,7 +14,7 @@ export default function Post() {
 
     useEffect(() => {
 
-        axios.get("https://localhost:5000/addpost")
+        axios.get("http://localhost:5000/addpost")
             .then(res => {
                 setPost(res.data)
                 //  console.log(post);

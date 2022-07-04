@@ -21,8 +21,8 @@ const App = ()=>{
             <Topbar />
                 <Home />
             <div className="app">
-                {/* <Login />
-                <Register /> */}
+                {/* <Login /> */}
+                {/* <Register /> */}
             {/* <AddPost/> */}
             <About />
             <Services />

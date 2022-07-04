@@ -45,7 +45,7 @@ class AddPost extends Component {
       image:this.state.image,
       description:this.state.description
     }
-    axios.post("http://localhost:5000/addpost", addedPost)
+    axios.post("https://wairimu.herokuapp.com/addpost", addedPost)
     .then(
       response =>
       console.log(response.data)
